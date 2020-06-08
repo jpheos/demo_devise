@@ -12,6 +12,20 @@
   </head>
 
   <body>
+
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/flashes' %>
+
+
+    <h3>user_signed_in?</h3>
+    <%= user_signed_in? %>
+
+    <h3>current_user</h3>
+    <%= current_user %>
+
+    <%= raw(ap(current_user, color: {array: :pale})) %>
+
+
     <%= yield %>
   </body>
 </html>
